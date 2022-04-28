@@ -11,4 +11,11 @@ node v16.14.0
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-### `npm start`
+### `Add User`
+http://localhost:3000/adduser
+
+### `Edit User`
+http://localhost:3000/edit/:id
+
+### `Create  Vacation`
+http://localhost:3000/createvacation/:id
