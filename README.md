@@ -19,3 +19,6 @@ http://localhost:3000/edit/:id
 
 ### `Create  Vacation`
 http://localhost:3000/createvacation/:id
+
+### `Show  User`
+http://localhost:3000/showuser/:id
