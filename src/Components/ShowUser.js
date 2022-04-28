@@ -194,22 +194,7 @@ function ShowUser() {
                     </Card.Body>
                   </Card>
                 </div>
-                <div className="form-group my-2">
-                  <Card className="text-center">
-                    <Card.Body>
-                      <Card.Title>Join Date</Card.Title>
-                      <input
-                        type="date"
-                        placeholder="Date Of Birth"
-                        className="form-control text-center"
-                        value={joinDate}
-                        onChange={(e) => setJoinDate(e.target.value)}
-                        max="2000-06-14"
-                        min="1960-06-14"
-                      />
-                    </Card.Body>
-                  </Card>
-                </div>
+
                 <div className="form-group my-2">
                   <Card className="text-center">
                     <Card.Body>
