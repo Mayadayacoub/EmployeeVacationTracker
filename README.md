@@ -16,3 +16,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ### `Add User`
 Open http://localhost:3000/adduser
+
+### `Edit User`
+Open http://localhost:3000/edit/:id
+
+### `Create Vacation`
+Open http://localhost:3000/createvacation/:id
+
+### `Show User`
+Open http://localhost:3000/showuser/:id
