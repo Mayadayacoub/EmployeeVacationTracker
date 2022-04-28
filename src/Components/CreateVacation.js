@@ -127,7 +127,13 @@ function CreateVacation() {
     setEndDate("");
     setStatus("");
   }
-
+  if (gender === "male" && vacation === "Maternity") {
+    alert(` ${vacation} vacations for Female`);
+    setVacation("");
+    setStartDate("");
+    setEndDate("");
+    setStatus("");
+  }
   if (status === "Active" && vacation) {
     setVacation("");
     setStartDate("");
@@ -160,7 +166,7 @@ function CreateVacation() {
 
     const data = {
       id: parseInt(id),
-      firstName,
+
       lastName,
       phone,
       email,
@@ -188,7 +194,7 @@ function CreateVacation() {
         <>
           {" "}
           <h1 className="display-5 text-center fw-bold my-5">
-            Create Vacation for user Code {code}
+            Create Vacation {firstName} {lastName}
           </h1>
           <div className="row">
             <div className="col-md-6 p-5 shadow mx-auto">
@@ -281,36 +287,7 @@ function CreateVacation() {
                     </Card.Body>
                   </Card>
                 </div>
-                <div className="form-group my-2">
-                  <Card className="text-center">
-                    <Card.Body>
-                      <Card.Title> Join Date</Card.Title>
-                      <input
-                        type="text"
-                        value={joinDate}
-                        name="role"
-                        placeholder="Employe Role"
-                        className="form-control text-center"
-                        disabled
-                      />
-                    </Card.Body>
-                  </Card>
-                </div>
-                <div className="form-group my-2">
-                  <Card className="text-center">
-                    <Card.Body>
-                      <Card.Title> Birth Date</Card.Title>
-                      <input
-                        type="text"
-                        value={birthDate}
-                        name="role"
-                        placeholder="Employee Role"
-                        className="form-control text-center"
-                        disabled
-                      />
-                    </Card.Body>
-                  </Card>
-                </div>
+
                 <div className="form-group my-2">
                   <Card className="text-center">
                     <Card.Body>
@@ -367,7 +344,7 @@ function CreateVacation() {
                     <div className="form-group my-2">
                       <Card className="text-center">
                         <Card.Body>
-                          <Card.Title>VacatioN Type</Card.Title>
+                          <Card.Title>Vacation Type</Card.Title>
                           <FloatingLabel
                             controlId="floatingSelect"
                             label="Select Status"
@@ -382,7 +359,7 @@ function CreateVacation() {
                               <option value="default" hidden>
                                 Vacation type
                               </option>
-                              <option value="Sick">sick</option>
+                              <option value="Sick">Sick</option>
                               <option value="Annual">Annual </option>
                               <option value="Unpaid">Unpaid </option>
                               <option value="Maternity">Maternity</option>

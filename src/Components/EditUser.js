@@ -46,20 +46,25 @@ function EditUser() {
   }
   const handlesubmit = (e) => {
     e.preventDefault();
-    const emailCheker = users.find(
+    const emailChecker = users.find(
       (user) => user.id !== parseInt(id) && user.email === email && email
     );
     const phoneChecker = users.find(
       (user) => user.id !== parseInt(id) && user.number === parseInt(phone)
     );
+    const codeChecker = users.find(
+      (user) => user.id !== parseInt(id) && user.code === parseInt(code)
+    );
 
-    if (emailCheker) {
+    if (emailChecker) {
       return alert("email error");
     }
     if (phoneChecker) {
-      return alert("phone error");
+      return alert("Phone Id Repeated");
     }
-
+    if (codeChecker) {
+      return alert("Code Is Repeated");
+    }
     const data = {
       id: parseInt(id),
       firstName,
@@ -190,12 +195,12 @@ function EditUser() {
                         <Card.Title>Join Date</Card.Title>
                         <input
                           type="date"
-                          placeholder="Date Of Birth"
+                          placeholder="Join Date"
                           className="form-control text-center"
                           value={joinDate}
                           onChange={(e) => setJoinDate(e.target.value)}
-                          max="2000-06-14"
-                          min="1960-06-14"
+                          max="2024-06-14"
+                          min="2010-06-14"
                         />
                       </Card.Body>
                     </Card>

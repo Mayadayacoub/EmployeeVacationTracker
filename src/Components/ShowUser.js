@@ -11,9 +11,11 @@ function ShowUser() {
   const [gender, setGender] = useState("");
   const [birthDate, setBirthDate] = useState("");
   const [annualLeave, setAnnualLeave] = useState("");
+  const [joinDate, setJoinDate] = useState("");
   const [vacation, setVacation] = useState("");
   const [status, setStatus] = useState("");
   const [code, setCode] = useState("");
+  const [role, setRole] = useState("");
   const [startDate, setStartDate] = useState("");
   const [endDate, setEndDate] = useState("");
   let diffTime = Math.abs(
@@ -50,6 +52,8 @@ function ShowUser() {
       setStartDate(filteredUser.startDate);
       setEndDate(filteredUser.endDate);
       setAnnualLeave(filteredUser.annualLeave);
+      setRole(filteredUser.role);
+      setJoinDate(filteredUser.joinDate);
     }
   }, [filteredUser]);
 
@@ -78,6 +82,8 @@ function ShowUser() {
       startDate,
       endDate,
       annualLeave,
+      role,
+      joinDate,
     };
     console.log(data);
     dispatch({ type: "UPDATEUSER", payload: data });
@@ -169,6 +175,37 @@ function ShowUser() {
                         disabled
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                      />
+                    </Card.Body>
+                  </Card>
+                </div>
+                <div className="form-group my-2">
+                  <Card className="text-center">
+                    <Card.Body>
+                      <Card.Title> Specify Role</Card.Title>
+                      <input
+                        type="text"
+                        placeholder="Specify Role"
+                        className="form-control text-center"
+                        disabled
+                        value={role}
+                        onChange={(e) => setRole(e.target.value)}
+                      />
+                    </Card.Body>
+                  </Card>
+                </div>
+                <div className="form-group my-2">
+                  <Card className="text-center">
+                    <Card.Body>
+                      <Card.Title>Join Date</Card.Title>
+                      <input
+                        type="date"
+                        placeholder="Date Of Birth"
+                        className="form-control text-center"
+                        value={joinDate}
+                        onChange={(e) => setJoinDate(e.target.value)}
+                        max="2000-06-14"
+                        min="1960-06-14"
                       />
                     </Card.Body>
                   </Card>
