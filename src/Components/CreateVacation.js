@@ -91,7 +91,7 @@ function CreateVacation() {
 
   if (vacation === "Sick" && days > 15) {
     alert(
-      `Sick Vacation should be At the most 15 days you have entered ${days} Please Try again`
+      `${vacation} Vacation should be At the most 15 days you have entered ${days} Please Try again`
     );
     setVacation("");
     setStartDate("");
@@ -101,7 +101,7 @@ function CreateVacation() {
 
   if (vacation === "Annual" && days > 30) {
     alert(
-      `Sick Vacation should be At the most 30 days Per Year you have entered ${days} Please Try again`
+      `${vacation} Vacation should be At the most 30 days Per Year you have entered ${days} Please Try again`
     );
     setVacation("");
     setStartDate("");
@@ -120,7 +120,7 @@ function CreateVacation() {
   }
   if (vacation === "Paternal" && days > 5) {
     alert(
-      `Sick Vacation should be At the most 5 days you have entered ${days} Please Try again`
+      `${vacation} Vacation should be At the most 5 days you have entered ${days} Please Try again`
     );
     setVacation("");
     setStartDate("");
