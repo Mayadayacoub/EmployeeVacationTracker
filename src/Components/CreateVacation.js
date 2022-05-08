@@ -111,7 +111,7 @@ function CreateVacation() {
 
   if (vacation === "Maternity" && days > 45) {
     alert(
-      `Sick Vacation should be At the most 45 days you have entered ${days} Please Try again`
+      `${vacation} Vacation should be At the most 45 days you have entered ${days} Please Try again`
     );
     setVacation("");
     setStartDate("");
